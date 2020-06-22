@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 套用google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 將完成的待辦事項加上刪除線 -->
+    <style>
+        .completed {
+            text-decoration: line-through
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="container my-3">
+        <h3 class="text-center my-4">待辦事項</h3>
+        <!-- 待辦事項輸入框 -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">待辦事項</span>
+            </div>
+            <input type="text" aria-label="taskInput" id="taskInput" class="form-control" placeholder="請輸入待辦事項" autofocus>
+            <div class="input-group-append">
+                <button class="btn btn-outline-info" type="button" id="addTask">送出</button>
+            </div>
+        </div>
+
+        <!-- 待辦事項清單 -->
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <span>
+                    目前有： <span id="taskCount">0</span> 筆任務
+                </span>
+                <button type="button" id="delAllTasks" class="btn btn-primary btn-sm">刪除所有任務</button>
+            </div>
+            <ul id="taskList" class="list-group list-group-flush">
+                <li class="taskEvent list-group-item">
+                    <p class="text-center">目前沒有任何待辦事項</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- import javascript -->
+    <script type="text/javascript" src="all.js"></script>
+</body>
+
+</html>
